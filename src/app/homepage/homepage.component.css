@@ -1,0 +1,41 @@
+
+body{
+  background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+  display: flex;
+  height: 100vh;
+}
+
+#platform{
+  display: flex;
+  margin: 0 auto 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  background: -webkit-linear-gradient(left, #c7b7ab, #f8f5f1);
+}
+
+
+
+.card{
+  background: -webkit-linear-gradient(left, cadetblue, #9ce3ce);
+  display: flex;
+  align-items: center;
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 300px;
+}
+
+.username{
+  text-decoration: none;
+  margin:  1rem;
+  color: white;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

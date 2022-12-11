@@ -1,0 +1,34 @@
+header{
+  background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  border-bottom: 2px solid #180222;
+
+}
+h1{
+  font-family: 'Fasthand', cursive;
+  cursor: pointer;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  margin-right: 4rem;
+}
+ul li a{
+  color: #180222;
+}
+ul li a:hover{
+  color: #7579ff;
+}
+.nav-list{
+  margin-top: 1rem;
+  list-style: none;
+  margin-left: 1rem;
+}
+
+

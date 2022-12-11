@@ -1,0 +1,52 @@
+body{
+  background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+  display: flex;
+  height: 100vh;
+}
+
+#platform{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  align-items: center;
+  justify-content: flex-start;
+  background: -webkit-linear-gradient(left, #c7b7ab, #f8f5f1);
+}
+
+#search{
+  margin-top: 4rem;
+}
+
+.friend-card{
+  margin: 2rem;
+}
+
+.fw-bold{
+  padding-right: 0.5rem;
+}
+
+.btn{
+  color: #b224ef;
+  background-color: #180222;
+  border: 0px;
+  border-radius: 5px;
+  height: 2.5rem;
+  width: 5rem;
+}
+
+.btn:hover{
+  color: #180222;
+  background-color: #b224ef;
+}
+
+#new-registiration a{
+  text-decoration: none;
+  color: #000;
+}
+#new-registiration a:hover{
+  color: rgb(109, 76, 76);
+}
+
+#icon:hover{
+  cursor: pointer;
+}

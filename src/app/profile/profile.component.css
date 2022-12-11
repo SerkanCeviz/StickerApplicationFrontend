@@ -1,0 +1,47 @@
+body{
+  background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+  height: 100vh;
+  display: flex;
+}
+
+#platform{
+  display: flex;
+  margin: 0 auto 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  background: -webkit-linear-gradient(left, #c7b7ab, #f8f5f1);
+}
+.row{
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.card{
+  background: -webkit-linear-gradient(left, cadetblue, #9ce3ce);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 300px;
+}
+
+.username{
+  text-decoration: none;
+  margin:  1rem;
+  color: white;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

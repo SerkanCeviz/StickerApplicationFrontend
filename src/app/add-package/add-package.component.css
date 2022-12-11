@@ -1,0 +1,23 @@
+body{
+  background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+  display: flex;
+  height: 100vh;
+}
+
+#platform{
+  display: flex;
+  margin: 0 auto 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  background: -webkit-linear-gradient(left, #c7b7ab, #f8f5f1);
+}
+
+.add-package{
+    margin: 15rem auto auto auto;
+}
+
+#button{
+  display: flex;
+  margin: auto;
+}
+

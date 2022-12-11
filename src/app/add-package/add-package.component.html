@@ -1,0 +1,29 @@
+<app-nav></app-nav>
+
+<body>
+<div class="col-3">
+
+</div>
+
+<div id="platform" class="col-6">
+  <form  #addPackageForm="ngForm" (ngSubmit)="addPackage(addPackageForm)">
+  <div class="add-package">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Package Name</span>
+      <input type="text" [(ngModel)]="model.name" name="name" class="form-control" placeholder="ILoveSticker" >
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3">Image URL</span>
+      <input type="text" [(ngModel)]="model.imageUrl" name="imageUrl" placeholder="https://image.com.tr" class="form-control">
+    </div>
+    <div id="click">
+      <button (click)="addPackage(addPackageForm)" id="button" type="button" class="btn btn-primary">Add Package</button>
+    </div>
+  </div>
+  </form>
+</div>
+
+<div class="col-3"></div>
+
+</body>
