@@ -22,7 +22,48 @@
     </div>
   </div>
   </form>
+
+  <form  #addStickerForm="ngForm" (ngSubmit)="addSticker(addStickerForm)">
+    <div class="add-package">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Sticker Name</span>
+        <input type="text" [(ngModel)]="model2.stickerName" name="name2" class="form-control" placeholder="ILoveSticker" >
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon5">Sticker Image URL</span>
+        <input type="text" [(ngModel)]="model2.imageUrl" name="imageUrl2" placeholder="https://image.com.tr" class="form-control">
+      </div>
+      <div id="packageOpener">
+        <button (click)="open(content)" id="butto" type="button" class="btn btn-primary">Choose Package</button>
+      </div>
+      <div id="click2">
+        <button style="margin-top: 20px" (click)="addSticker(addStickerForm)" id="button1" type="button" class="btn btn-primary">Add Sticker</button>
+      </div>
+    </div>
+  </form>
 </div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Sticker Ekle</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label>Pakete Ekle</label>
+        <div class="row row-cols-3">
+          <div *ngFor="let package of packages" class="card" style="width: 10rem; height: 10rem;">
+            <img src="{{package.imageUrl}}" (click)="choosePackage(package.id)" class="card-img-top" alt="sticker" style="width: 10rem; height: 10rem;">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
 
 <div class="col-3"></div>
 

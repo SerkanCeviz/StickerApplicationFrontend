@@ -13,12 +13,18 @@ body{
   background: -webkit-linear-gradient(left, #c7b7ab, #f8f5f1);
 }
 
-
+.row{
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .card{
   background: -webkit-linear-gradient(left, cadetblue, #9ce3ce);
   display: flex;
   align-items: center;
+  margin: 1rem;
 }
 
 img{
@@ -39,3 +45,14 @@ img{
   justify-content: center;
   cursor: pointer;
 }
+
+#model-img{
+  border: white solid 4px;
+  cursor: pointer;
+}
+
+#model-img.selected{
+  border: blue solid 4px;
+}
+
+

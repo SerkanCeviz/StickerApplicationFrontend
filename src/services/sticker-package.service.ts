@@ -18,7 +18,7 @@ export class StickerPackageService {
   getStickers():Observable<StickerPackage[]>{
      return this.http.get<StickerPackage[]>(this.path+this.user.getUserId());
   }
-//Bu KISIMDA HATA VAR İSTEK GİTMİYOR.
+
   addPackage(stickerPackage:StickerPackage){
     return this.http.post(this.path+"addPackage/"+this.user.userId, stickerPackage);
   }

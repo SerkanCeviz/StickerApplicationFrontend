@@ -4,6 +4,7 @@ import {Sticker} from "./Sticker";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {StickerPackageService} from "../../services/sticker-package.service";
 import {StickerPackage} from "../add-package/StickerPackage";
+import {AlertifyService} from "../../services/alertify.service";
 
 @Component({
   selector: 'app-homepage',
@@ -14,10 +15,14 @@ import {StickerPackage} from "../add-package/StickerPackage";
 export class HomepageComponent implements OnInit {
 
   constructor(private stickerService:StickerService,private modalService: NgbModal
-              ,private packageService:StickerPackageService) { }
+              ,private packageService:StickerPackageService,
+              private alertify:AlertifyService) { }
 
   stickers: Sticker[];
   packages:StickerPackage[];
+  stickerId:number;
+  packageId:number;
+
 
   ngOnInit(){
     this.stickerService.getStickers().subscribe(data=>{
@@ -26,7 +31,8 @@ export class HomepageComponent implements OnInit {
   }
 
 // @ts-ignore
-  open(content) {
+  open(content,stickerId:number) {
+    this.stickerId=stickerId;
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
     this.packageService.getStickers().subscribe(data=>{
       this.packages = data;
@@ -35,6 +41,14 @@ export class HomepageComponent implements OnInit {
 
   saveToPackage(packageId:number){
     console.log(packageId);
+    this.packageId=packageId;
+  }
+
+  addStickerToPackage(){
+    console.log("Çalıştım Bilader");
+    this.stickerService.addStickerToPackage(this.stickerId, this.packageId).subscribe((res)=>{
+      this.alertify.success("Sticker Pakete Eklendi");
+    });
   }
 
 }

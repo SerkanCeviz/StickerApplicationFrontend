@@ -15,7 +15,7 @@ export class AccountService {
   loginUser : Users;
 
 
-  login(user:Users){
+  async  login(user:Users){
      this.usersService.login(user.nickName, user.password).subscribe(user =>{
       this.loginUser= user;
     });
